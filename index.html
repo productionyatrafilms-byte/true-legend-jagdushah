@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>True Legends - Jagdu Shah</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+
+  <body id="body">
+    <img class="page-bg" src="./assets/images/bg.png" alt="" />
+
+    <div class="main-container">
+      <div class="stage" id="stage">
+        <img
+          class="stage-spacer"
+          src="./assets/images/stage-spacer.png"
+          alt=""
+        />
+
+        <div id="langSelect">
+          <div id="language">
+            <label
+              ><input
+                type="radio"
+                onclick="val('English')"
+                name="lang"
+                id="en"
+                value="English"
+              />
+              <span>E</span>
+            </label>
+            <label
+              ><input
+                type="radio"
+                onclick="val('Hindi')"
+                name="lang"
+                id="hi"
+                value="Hindi"
+              />
+              <span>H</span>
+            </label>
+            <label
+              ><input
+                type="radio"
+                onclick="val('Gujrati')"
+                name="lang"
+                id="gu"
+                value="Gujrati"
+              />
+              <span>G</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="glow glow-intro-red"></div>
+        <div class="glow glow-intro-magenta"></div>
+        <div class="glow glow-video-red"></div>
+        <div class="glow glow-video-magenta"></div>
+
+        <img
+          class="mascot"
+          src="./assets/images/mascot.png"
+          alt="Udayan Mantri standing with a sword"
+        />
+
+        <div class="video-caption">
+          <img
+            class="caption-decor caption-decor-left"
+            src="./assets/images/decol.png"
+            alt=""
+          />
+          <img
+            class="caption-text caption-text-english english"
+            src="./assets/images/stext.png"
+            alt="Udayan Mantri"
+          />
+          <img
+            class="caption-text caption-text-hindi hindi"
+            src="./assets/images/stexthi.png"
+            alt="Udayan Mantri"
+          />
+          <img
+            class="caption-text caption-text-gujrati gujrati"
+            src="./assets/images/stextgj.png"
+            alt="Udayan Mantri"
+          />
+          <img
+            class="caption-decor caption-decor-right"
+            src="./assets/images/decor.png"
+            alt=""
+          />
+        </div>
+
+        <div class="video-frame stage-item">
+          <img
+            class="video-frame-spacer"
+            src="./assets/images/video-spacer.png"
+            alt=""
+          />
+          <video
+            class="video"
+            id="video"
+            preload="none"
+            playsinline
+            poster="./assets/images/thumbnail.png"
+            src="./assets/videos/video.webm"
+          ></video>
+
+          <div class="video-controls">
+            <div class="video-controls-row">
+              <button
+                class="video-btn video-btn-toggle"
+                id="btnToggle"
+                type="button"
+                aria-label="Play or pause"
+              >
+                <span class="icon-play"></span>
+                <span class="icon-pause"></span>
+              </button>
+              <span class="video-time" id="videoTime">0:00 / 0:00</span>
+              <span class="video-controls-gap"></span>
+              <button
+                class="video-btn video-btn-mute"
+                id="btnMute"
+                type="button"
+                aria-label="Mute or unmute"
+              >
+                <span class="icon-volume"></span>
+              </button>
+              <input
+                class="video-range video-volume"
+                id="videoVolume"
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+                aria-label="Volume"
+              />
+              <button
+                class="video-btn video-btn-full"
+                id="btnFull"
+                type="button"
+                aria-label="Fullscreen"
+              >
+                <span class="icon-full"></span>
+              </button>
+              <span class="video-btn video-btn-more"
+                ><span class="icon-more"></span
+              ></span>
+            </div>
+            <input
+              class="video-range video-seek"
+              id="videoSeek"
+              type="range"
+              min="0"
+              max="1000"
+              step="1"
+              value="0"
+              aria-label="Seek"
+            />
+          </div>
+        </div>
+
+        <button
+          class="video-play stage-item"
+          id="videoPlay"
+          type="button"
+          aria-label="Play video"
+        >
+          <img class="play-icon" src="./assets/images/play.png" alt="Play" />
+          <img class="pause-icon" src="./assets/images/pause.png" alt="Pause" />
+          <img
+            class="replay-icon"
+            src="./assets/images/replay.png"
+            alt="Replay"
+          />
+        </button>
+
+        <button
+          class="video-replay stage-item"
+          id="videoReplay"
+          type="button"
+          aria-label="Replay video from the start"
+        >
+          <img
+            class="replay-icon"
+            src="./assets/images/replay.png"
+            alt="Replay"
+          />
+        </button>
+
+        <div class="header stage-item">
+          <img
+            class="header-plate"
+            src="./assets/images/title.png"
+            alt="True Legends plate"
+          />
+          <p class="header-title">
+            <span class="english">TRUE LEGENDS</span>
+            <span class="hindi">ट्रू लेजेंड्स</span>
+            <span class="gujrati">ટ્રુ લેજેન્ડ્સ</span>
+          </p>
+          <p class="header-title header-title-gold" aria-hidden="true">
+            <span class="english">TRUE LEGENDS</span>
+            <span class="hindi">ट्रू लेजेंड्स</span>
+            <span class="gujrati">ટ્રુ લેજેન્ડ્સ</span>
+          </p>
+        </div>
+
+        <div class="intro-group">
+          <img
+            class="intro-title intro-title-english english"
+            src="./assets/images/text.png"
+            alt="Udayan Mantri"
+          />
+          <img
+            class="intro-title intro-title-hindi hindi"
+            src="./assets/images/texthi.png"
+            alt="Udayan Mantri"
+          />
+          <img
+            class="intro-title intro-title-gujrati gujrati"
+            src="./assets/images/textgj.png"
+            alt="Udayan Mantri"
+          />
+
+          <button class="intro-click" id="introClick" type="button">
+            <span class="intro-click-text">
+              <span class="english">Click</span>
+              <span class="hindi">क्लिक</span>
+              <span class="gujrati">ક્લિક</span>
+            </span>
+          </button>
+        </div>
+
+        <a class="back-btn stage-item" href="./index.html">
+          <img src="./assets/images/home.png" alt="Home" />
+        </a>
+      </div>
+    </div>
+
+    <script src="./assets/js/jquery-3.7.1.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
